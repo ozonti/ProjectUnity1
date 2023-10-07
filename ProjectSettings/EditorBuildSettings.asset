@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 52c1895e896c94bed86056418fb17be0
   - enabled: 1
@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GirlAvatar.unity
     guid: 442862ba5b0644038b223be42cac5f2c
+  - enabled: 1
+    path: Assets/Scenes/BoyAvatar.unity
+    guid: 1f381bf3e3989db4097a9b6e74b93772
+  - enabled: 1
+    path: Assets/Scenes/DogAvatar.unity
+    guid: e7e1dc3269262244fbda53cac0eb197c
+  - enabled: 1
+    path: Assets/Scenes/CatAvatar.unity
+    guid: 96e05effbc7faa843b9dcc981f85b228
   m_configObjects: {}

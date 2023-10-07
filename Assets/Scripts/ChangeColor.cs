@@ -1,37 +1,71 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChangeColor : MonoBehaviour
 {
-    Renderer ren;
+    public Image[] objectImage;
+    public Color newColor;
 
-
-
-
-    public void ChangingColor(int idBtn)
+    public void Change(int idBtn)
     {
-        ren = GetComponent<Renderer>();
-
-        if (idBtn == 1)
+        switch (idBtn)
         {
-            ren.material.color = Color.red;
-        }
-        else if (idBtn == 2)
-        {
-            ren.material.color = Color.blue;
-        }
-        else if (idBtn == 3)
-        {
-            ren.material.color = Color.green;
-        }
-        else if (idBtn == 4)
-        {
-            ren.material.color = Color.yellow;
-        }
-        else if (idBtn == 5)
-        {
-            ren.material.color = Color.grey;
+            case 1: //серый ffffff
+                newColor = new Color32(0xff, 0xff, 0xff, 0xFF);
+                foreach (Image image in objectImage)
+                {
+                    image.color = newColor;
+                }
+                break;
+            case 2: //Черный 30355с
+                newColor = new Color32(0x30, 0x35, 0x5C, 0xFF);
+                foreach (Image image in objectImage)
+                {
+                    image.color = newColor;
+                }
+                break;
+            case 3: //Блон ffe540
+                newColor = new Color32(0xFF, 0xE5, 0x40, 0xFF);
+                foreach (Image image in objectImage)
+                {
+                    image.color = newColor;
+                }
+                break;
+            case 4: //Рыжий ff4a1d
+                newColor = new Color32(0xFF, 0x4A, 0x1D, 0xFF);
+                foreach (Image image in objectImage)
+                {
+                    image.color = newColor;
+                }
+                break;
+            case 5: //Шат a47220
+                newColor = new Color32(0xA4, 0x72, 0x20, 0xFF);
+                foreach (Image image in objectImage)
+                {
+                    image.color = newColor;
+                }
+                break;
+            case 6: //Зеленый 00ff57
+                newColor = new Color32(0x00, 0xFF, 0x57, 0xFF);
+                foreach (Image image in objectImage)
+                {
+                    image.color = newColor;
+                }
+                break;
+            case 7: //Розовый eb00ff
+                newColor = new Color32(0x00, 0xD3, 0xFF, 0xFF);
+                foreach (Image image in objectImage)
+                {
+                    image.color = newColor;
+                }
+                break;
+            case 8: //Синий 00d3ff
+                newColor = new Color32(0xEB, 0x00, 0xFF, 0xFF);
+                foreach (Image image in objectImage)
+                {
+                    image.color = newColor;
+                }
+                break;
         }
     }
 }
