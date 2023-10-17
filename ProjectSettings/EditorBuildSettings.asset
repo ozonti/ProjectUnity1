@@ -13,6 +13,9 @@ EditorBuildSettings:
     guid: ef597462e78b142c1a200a2446a507ae
   - enabled: 1
     path: Assets/Scenes/Collection.unity
+    guid: 2d3f676c8e1294b409434ae3e85a10cb
+  - enabled: 0
+    path: Assets/Scenes/Collection.unity
     guid: 67abe4bb51c3c4be9b4d83200c485c36
   - enabled: 1
     path: Assets/Scenes/GirlAvatar.unity
