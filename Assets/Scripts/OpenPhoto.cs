@@ -12,26 +12,26 @@ public class OpenPhoto : MonoBehaviour
 
     void Start()
     {
-        int idx = Progress.Instance.PlayerInfo.index;
-        rwPrefab.GetComponent<RawImage>().texture = Progress.Instance.PlayerInfo.PhotosInfo[idx];
+        int idx = Progress.Instance.index;
+        rwPrefab.GetComponent<RawImage>().texture = Progress.Instance.PhotosInfo[idx];
     }
 
     void Update()
     {
-        if (Progress.Instance.PlayerInfo.index == Progress.Instance.PlayerInfo.PhotosInfo.Count - 1)
+        if (Progress.Instance.index == Progress.Instance.PhotosInfo.Count - 1)
         {
             RightBtn.SetActive(false);
         }
-        if (Progress.Instance.PlayerInfo.index == 0)
+        if (Progress.Instance.index == 0)
         {
             LeftBtn.SetActive(false);
         }
 
-        if (Progress.Instance.PlayerInfo.index != Progress.Instance.PlayerInfo.PhotosInfo.Count - 1)
+        if (Progress.Instance.index != Progress.Instance.PhotosInfo.Count - 1)
         {
             RightBtn.SetActive(true);
         }
-        if (Progress.Instance.PlayerInfo.index != 0)
+        if (Progress.Instance.index != 0)
         {
             LeftBtn.SetActive(true);
         }
@@ -41,19 +41,19 @@ public class OpenPhoto : MonoBehaviour
     {
         if (to == 0)
         {
-            Progress.Instance.PlayerInfo.index -= 1;
+            Progress.Instance.index -= 1;
             LoadImages();
         }
         else
         {
-            Progress.Instance.PlayerInfo.index += 1;
+            Progress.Instance.index += 1;
             LoadImages();
         }
     }
 
     public void LoadImages()
     {
-        int idx = Progress.Instance.PlayerInfo.index;
-        rwPrefab.GetComponent<RawImage>().texture = Progress.Instance.PlayerInfo.PhotosInfo[idx];
+        int idx = Progress.Instance.index;
+        rwPrefab.GetComponent<RawImage>().texture = Progress.Instance.PhotosInfo[idx];
     }
 }

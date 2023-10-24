@@ -1,22 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
 using UnityEngine.SceneManagement;
+using YG;
 
 public class GameManager : MonoBehaviour
 {
-    [DllImport("__Internal")]
-    private static extern void ShowAdv();
-
-    /*void Start()
-    {
-        ShowAdv();
-    }*/
-
     public void LoadScene(int idScene)
     {
-        //Progress.instance.Save();
+        if (idScene == 0)
+        {
+            YandexGame.FullscreenShow();
+        }
         SceneManager.LoadScene(idScene);
+        if (idScene == 5)
+        {
+            YandexGame.RewVideoShow(1);
+        }
     }
 }
