@@ -12,6 +12,7 @@ public class Progress : MonoBehaviour
 {
     public List<Texture2D> PhotosInfo;
     public int index = 0;
+    public AudioSource audio;
 
     public static Progress Instance;
 
@@ -27,7 +28,12 @@ public class Progress : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        audio = GetComponent<AudioSource>();
+        audio.Play();
     }
+
+
 
 }
 
